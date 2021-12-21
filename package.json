@@ -1,0 +1,22 @@
+{
+  "name": "express-validation-with-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "schema": "node schemaGenerator.js",
+    "build": "npm run schema && tsc",
+    "start": "npm run build && node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.8.2",
+    "express": "^4.17.2",
+    "typescript-json-schema": "^0.52.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
+  }
+}
