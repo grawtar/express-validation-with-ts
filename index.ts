@@ -13,7 +13,7 @@ function validateBody(schema: object) {
   // compile schema
   const validate = ajv.compile(schema);
   // middleware that returns error if schema is not ok
-  return (req: Request, res: Response, next: NextFunction) => {
+  return (req: any, res: any, next: NextFunction) => {
     if (!validate(req.body)) return res.status(400).json(validate.errors);
     return next();
   };
